@@ -1,0 +1,13 @@
+
+    <table id="players" *ngIf="ODIPlayers">
+        <tr>
+            <th>PlayerName</th>
+            <th>Country</th>
+            <th>Ranking</th>
+          </tr>
+          <tr *ngFor="let x of ODIPlayers" routerLink="/player/{{x.playerName}}">
+            <td><span style="cursor: pointer" (click)="showProfile(x.playerName)">{{x.playerName}}</span></td>
+            <td>{{x.country}}</td>
+            <td>{{x.ranking_ODI}}</td>
+          </tr>
+    </table>
